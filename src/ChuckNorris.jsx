@@ -1,10 +1,12 @@
 import React from 'react'
 import "./ChuckNorris.css"
 import x from "./assets/x.png"
-import {useState} from "react"
+import {useState,useEffect} from "react"
 const ChuckNorris = () => {
     const [chuckNorrisData, setChuckNorrisData] = useState("")
-
+  useEffect(() => {
+    generateJoke()
+  } ,[])
 
 async function generateJoke(){
    
